@@ -158,14 +158,6 @@ func processEvents(partitionClient *azeventhubs.ProcessorPartitionClient) error 
 	}
 }
 
-func convertEvent(event *azeventhubs.ReceivedEventData) map[string]interface{} {
-	result := make(map[string]interface{})
-	result["Body"] = string(event.Body)
-	result["Properties"] = event.Properties
-	result["SystemProperties"] = event.SystemProperties
-	return result
-}
-
 func closePartitionResources(partitionClient *azeventhubs.ProcessorPartitionClient) {
 	defer partitionClient.Close(context.TODO())
 }
