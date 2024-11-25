@@ -1,0 +1,7 @@
+container_name: "auditlog"
+storage_account_name: "eventhub"
+event_hub_namespace: "eventhub008.servicebus.windows.net"
+event_hub_name: "kube-api-log"
+client_id: ""
+client_secret: ""
+tenant_id: ""
